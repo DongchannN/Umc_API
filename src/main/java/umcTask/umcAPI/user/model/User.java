@@ -1,4 +1,4 @@
-package umcTask.umcAPI.model;
+package umcTask.umcAPI.user.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
