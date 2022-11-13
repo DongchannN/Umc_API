@@ -1,46 +1,49 @@
-package umcTask.umcAPI.controller;
+package umcTask.umcAPI.user;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import umcTask.umcAPI.model.User;
-import umcTask.umcAPI.service.InfoService;
+import umcTask.umcAPI.user.model.GetUserRes;
+import umcTask.umcAPI.user.model.PatchUserReq;
+import umcTask.umcAPI.user.model.PostUserReq;
+import umcTask.umcAPI.user.model.User;
 
 import java.util.List;
 
 @Slf4j
 @RestController
-public class HomeController {
+@RequestMapping("/users")
+public class UserController {
 
     @Autowired
-    private InfoService infoService;
+    private UserService userService;
 
     @GetMapping("/test")
     public String projectInfo() {
         return "Controller is working!";
     }
 
-    @GetMapping("/userList")
+    @GetMapping("/list")
     public Object userList() {
         log.debug("/userList start");
-        List<User> userList = infoService.getUserList();
+        List<GetUserRes> userList = userService.getUserList();
 
         return userList;
     }
 
-    @GetMapping("/userListByCode")
-    public Object userByStatusCode(@RequestParam("status") String status) {
-        List<User> userList = infoService.findUserByStatus(status);
+    @GetMapping("/statusList/{status}")
+    public Object userByStatusCode(@PathVariable("status") String status) {
+        List<GetUserRes> userList = userService.findUserByStatus(status);
         return userList;
     }
 
     @PostMapping(value = "/join")
-    public ResponseEntity<User> joinUser(@RequestBody User user) {
+    public ResponseEntity<PostUserReq> joinUser(@RequestBody PostUserReq postUserReq) {
         try {
-            log.debug("user = {}", user.toString());
-            return new ResponseEntity<>(infoService.insert(user), HttpStatus.OK);
+            log.debug("user = {}", postUserReq.toString());
+            return new ResponseEntity<>(userService.createUser(postUserReq), HttpStatus.OK);
         } catch (Exception e) {
             log.error(e.toString());
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
@@ -52,19 +55,20 @@ public class HomeController {
     public ResponseEntity<String> userDelete(@RequestParam(value = "userIdx") Integer userIdx) {
         try {
             log.debug("user idx = {}", userIdx);
-            Integer deletedCnt = infoService.deleteByIdx(userIdx);
+            Integer deletedCnt = userService.deleteByIdx(userIdx);
             return new ResponseEntity<>(String.format("%d deleted", deletedCnt), HttpStatus.OK);
         } catch (Exception e) {
             log.error(e.toString());
             return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-
-    @PostMapping(value = "/changeInfo")
-    public ResponseEntity<String> changeUser(@RequestBody User user) {
+    
+    @PatchMapping( "/changeInfo/{userIdx}")
+    public ResponseEntity<String> changeUser(@PathVariable("userIdx") int userIdx, @RequestBody User user) {
         try {
+            PatchUserReq patchUserReq = new PatchUserReq(userIdx, user.getUserName(), user.getUserPw());
             log.debug("user = {}", user.toString());
-            Integer updatedCnt = infoService.updateByIdx(user);
+            Integer updatedCnt = userService.updateByIdx(patchUserReq);
 
             return new ResponseEntity<>(String.format("%d updated", updatedCnt), HttpStatus.OK);
         } catch (Exception e) {

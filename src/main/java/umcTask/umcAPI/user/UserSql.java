@@ -1,4 +1,4 @@
-package umcTask.umcAPI.repository;
+package umcTask.umcAPI.user;
 
 public class UserSql {
     public static final String SELECT = "SELECT userIdx, userId, userName, userPw, createdAt, status FROM user WHERE 1=1";

@@ -1,6 +1,7 @@
-package umcTask.umcAPI.repository;
+package umcTask.umcAPI.user;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.EmptySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
@@ -8,47 +9,54 @@ import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
-import umcTask.umcAPI.model.User;
+import umcTask.umcAPI.user.model.GetUserRes;
+import umcTask.umcAPI.user.model.PatchUserReq;
+import umcTask.umcAPI.user.model.PostUserReq;
 
+import javax.sql.DataSource;
 import java.util.List;
 
 @Slf4j
 @Repository
-public class UserRepository {
-    private final NamedParameterJdbcTemplate namedParameterJdbcTemplate;
-
+public class UserDao {
+    @Autowired
+    private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
     private final UserRowMapper userRowMapper;
-    public UserRepository(NamedParameterJdbcTemplate namedParameterJdbcTemplate, UserRowMapper userRowMapper) {
+
+    public UserDao(NamedParameterJdbcTemplate namedParameterJdbcTemplate, UserRowMapper userRowMapper) {
         this.namedParameterJdbcTemplate = namedParameterJdbcTemplate;
         this.userRowMapper = userRowMapper;
     }
+    @Autowired
+    public void setDataSource(DataSource dataSource){
+        this.namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(dataSource);
+    }
 
     UserSql s = new UserSql();
-    public List<User> findList(){
-        log.debug("findList query : {}", s.SELECT);
+
+
+    public List<GetUserRes> findList(){
 
         return namedParameterJdbcTemplate.query(s.SELECT
                 , EmptySqlParameterSource.INSTANCE
                 , this.userRowMapper);
     }
 
-    public List<User> findByStatusCode(String status) {
+    public List<GetUserRes> findByStatusCode(String status) {
         String qry = UserSql.SELECT + UserSql.STATUS_CODE;
         SqlParameterSource parameterSource = new MapSqlParameterSource("status", status);
         return namedParameterJdbcTemplate.query(qry, parameterSource, this.userRowMapper);
     }
 
-    public User insert(User user) {
+    public PostUserReq createUser(PostUserReq postUserReq) {
         KeyHolder keyHolder = new GeneratedKeyHolder();
-        SqlParameterSource parameterSource = new MapSqlParameterSource("userId", user.getUserId())
-                                                            .addValue("userName", user.getUserName())
-                                                            .addValue("userPw", user.getUserPw());
-                                                            //.addValue("status", user.getStatus())
-                                                            //.addValue("createdAt", user.getCreatedAt());
+        SqlParameterSource parameterSource = new MapSqlParameterSource("userId", postUserReq.getUserId())
+                                                            .addValue("userName", postUserReq.getUserName())
+                                                            .addValue("userPw", postUserReq.getUserPw());
         int affectedRows = namedParameterJdbcTemplate.update(UserSql.INSERT, parameterSource, keyHolder);
         log.debug("{} inserted, new id = {}", affectedRows, keyHolder.getKey());
 
-        return user;
+        return postUserReq;
     }
 
     public Integer deleteByIdx(Integer userIdx) {
@@ -58,13 +66,12 @@ public class UserRepository {
         return namedParameterJdbcTemplate.update(UserSql.DELETE + UserSql.ID_CONDITION, parameterSource);
     }
 
-    public Integer updateByIdx(User user) {
+    public Integer updateByIdx(PatchUserReq patchUserReq) {
         String qry = UserSql.UPDATE + UserSql.ID_CONDITION;
 
-        SqlParameterSource parameterSource = new MapSqlParameterSource("userIdx", user.getUserIdx())
-                                                            .addValue("userName", user.getUserName())
-                                                            .addValue("userId", user.getUserId())
-                                                            .addValue("userPw", user.getUserPw());
+        SqlParameterSource parameterSource = new MapSqlParameterSource("userIdx", patchUserReq.getUserIdx())
+                                                            .addValue("userName", patchUserReq.getUserName())
+                                                            .addValue("userPw", patchUserReq.getUserPw());
         return namedParameterJdbcTemplate.update(qry , parameterSource);
     }
 }
