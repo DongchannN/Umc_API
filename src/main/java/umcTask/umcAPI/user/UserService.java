@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import umcTask.umcAPI.user.model.GetUserRes;
 import umcTask.umcAPI.user.model.PatchUserReq;
+import umcTask.umcAPI.user.model.PostLoginReq;
 import umcTask.umcAPI.user.model.PostUserReq;
 
 import java.util.List;
@@ -39,6 +40,10 @@ public class UserService {
         log.debug("user Idx = {}", patchUserReq.getUserIdx());
 
         return userDao.updateByIdx(patchUserReq);
+    }
+
+    public Integer userLogin(PostLoginReq postLoginReq) {
+        return userDao.userLogin(postLoginReq);
     }
 
 }

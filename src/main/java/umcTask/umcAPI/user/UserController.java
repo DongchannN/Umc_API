@@ -1,14 +1,12 @@
 package umcTask.umcAPI.user;
 
 import lombok.extern.slf4j.Slf4j;
+import org.apache.logging.log4j.message.StringFormattedMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import umcTask.umcAPI.user.model.GetUserRes;
-import umcTask.umcAPI.user.model.PatchUserReq;
-import umcTask.umcAPI.user.model.PostUserReq;
-import umcTask.umcAPI.user.model.User;
+import umcTask.umcAPI.user.model.*;
 
 import java.util.List;
 
@@ -62,8 +60,8 @@ public class UserController {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-    
-    @PatchMapping( "/changeInfo/{userIdx}")
+
+    @PatchMapping("/changeInfo/{userIdx}")
     public ResponseEntity<String> changeUser(@PathVariable("userIdx") int userIdx, @RequestBody User user) {
         try {
             PatchUserReq patchUserReq = new PatchUserReq(userIdx, user.getUserName(), user.getUserPw());
@@ -75,5 +73,12 @@ public class UserController {
             log.error(e.toString());
             return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<String> loginUser(@RequestBody PostLoginReq postLoginReq) {
+        Integer loginCnt = userService.userLogin(postLoginReq);
+
+        return new ResponseEntity<>(String.format("%d joined", loginCnt), HttpStatus.OK);
     }
 }
