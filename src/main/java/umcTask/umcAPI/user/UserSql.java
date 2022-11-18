@@ -5,6 +5,8 @@ public class UserSql {
 
     public static final String STATUS_CODE = " AND status = :status;";
 
+    public static final String USER_ID = " AND userId = :userId;";
+
     public static final String INSERT = "INSERT INTO User (userId, userName, userPw) values (:userId, :userName, :userPw);";
 
     public static final String DELETE = "DELETE FROM User WHERE 1=1";

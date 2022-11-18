@@ -1,188 +1,94 @@
-[INFO ] 00:56:03.894 umcTask.umcAPI.UmcApiApplication - Starting UmcApiApplication using Java 11.0.11 on idongchan-ui-MacBookAir.local with PID 55747 (/Users/idongchan/Desktop/study/umcAPI/build/classes/java/main started by idongchan in /Users/idongchan/Desktop/study/umcAPI)
-[INFO ] 00:56:03.912 umcTask.umcAPI.UmcApiApplication - No active profile set, falling back to 1 default profile: "default"
-[INFO ] 00:56:05.152 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[INFO ] 00:56:05.152 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[INFO ] 00:56:05.829 o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[INFO ] 00:56:05.843 o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
-[INFO ] 00:56:06.506 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-[INFO ] 00:56:06.515 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-[INFO ] 00:56:06.516 o.a.catalina.core.StandardService - Starting service [Tomcat]
-[INFO ] 00:56:06.516 o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
-[INFO ] 00:56:06.734 org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-[INFO ] 00:56:06.743 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-[INFO ] 00:56:06.743 o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1590 ms
-[INFO ] 00:56:06.943 org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.12.Final
-[INFO ] 00:56:07.039 o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-[INFO ] 00:56:07.118 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-[INFO ] 00:56:07.248 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-[INFO ] 00:56:07.263 org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-[INFO ] 00:56:07.446 o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[INFO ] 00:56:07.456 o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[WARN ] 00:56:07.615 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[INFO ] 00:56:07.912 o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-[INFO ] 00:56:07.937 o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-[INFO ] 00:56:07.955 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-[INFO ] 00:56:07.988 umcTask.umcAPI.UmcApiApplication - Started UmcApiApplication in 4.68 seconds (JVM running for 5.559)
-[INFO ] 00:57:52.263 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[INFO ] 00:57:52.265 o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-[INFO ] 00:57:52.268 o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
-[WARN ] 00:57:52.286 o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
-[INFO ] 01:04:35.088 o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-[INFO ] 01:04:35.096 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-[INFO ] 01:04:35.113 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-[INFO ] 01:04:40.208 umcTask.umcAPI.UmcApiApplication - Starting UmcApiApplication using Java 11.0.11 on idongchan-ui-MacBookAir.local with PID 55799 (/Users/idongchan/Desktop/study/umcAPI/build/classes/java/main started by idongchan in /Users/idongchan/Desktop/study/umcAPI)
-[INFO ] 01:04:40.210 umcTask.umcAPI.UmcApiApplication - No active profile set, falling back to 1 default profile: "default"
-[INFO ] 01:04:41.654 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[INFO ] 01:04:41.654 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[INFO ] 01:04:42.320 o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[INFO ] 01:04:42.336 o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
-[INFO ] 01:04:42.940 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-[INFO ] 01:04:42.949 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-[INFO ] 01:04:42.950 o.a.catalina.core.StandardService - Starting service [Tomcat]
-[INFO ] 01:04:42.950 o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
-[INFO ] 01:04:43.221 org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-[INFO ] 01:04:43.231 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-[INFO ] 01:04:43.231 o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1576 ms
-[INFO ] 01:04:43.431 org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.12.Final
-[INFO ] 01:04:43.505 o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-[INFO ] 01:04:43.573 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-[INFO ] 01:04:43.700 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-[INFO ] 01:04:43.714 org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-[INFO ] 01:04:43.895 o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[INFO ] 01:04:43.902 o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[WARN ] 01:04:44.087 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[INFO ] 01:04:44.400 o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-[INFO ] 01:04:44.433 o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-[INFO ] 01:04:44.456 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-[INFO ] 01:04:44.496 umcTask.umcAPI.UmcApiApplication - Started UmcApiApplication in 4.747 seconds (JVM running for 5.502)
-[INFO ] 01:05:05.374 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[INFO ] 01:05:05.376 o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-[INFO ] 01:05:05.378 o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-[WARN ] 01:05:55.736 o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
-[INFO ] 01:14:00.824 o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-[INFO ] 01:14:00.831 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-[INFO ] 01:14:00.846 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-[INFO ] 01:14:05.514 umcTask.umcAPI.UmcApiApplication - Starting UmcApiApplication using Java 11.0.11 on idongchan-ui-MacBookAir.local with PID 55845 (/Users/idongchan/Desktop/study/umcAPI/build/classes/java/main started by idongchan in /Users/idongchan/Desktop/study/umcAPI)
-[INFO ] 01:14:05.516 umcTask.umcAPI.UmcApiApplication - No active profile set, falling back to 1 default profile: "default"
-[INFO ] 01:14:06.733 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[INFO ] 01:14:06.733 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[INFO ] 01:14:07.518 o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[INFO ] 01:14:07.534 o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
-[INFO ] 01:14:08.174 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-[INFO ] 01:14:08.188 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-[INFO ] 01:14:08.189 o.a.catalina.core.StandardService - Starting service [Tomcat]
-[INFO ] 01:14:08.189 o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
-[INFO ] 01:14:08.403 org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-[INFO ] 01:14:08.412 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-[INFO ] 01:14:08.412 o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1678 ms
-[INFO ] 01:14:08.606 org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.12.Final
-[INFO ] 01:14:08.686 o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-[INFO ] 01:14:08.753 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-[INFO ] 01:14:08.859 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-[INFO ] 01:14:08.871 org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-[INFO ] 01:14:09.048 o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[INFO ] 01:14:09.055 o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[WARN ] 01:14:09.195 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[INFO ] 01:14:09.468 o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-[INFO ] 01:14:09.491 o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-[INFO ] 01:14:09.509 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-[INFO ] 01:14:09.545 umcTask.umcAPI.UmcApiApplication - Started UmcApiApplication in 4.507 seconds (JVM running for 5.404)
-[INFO ] 01:14:17.882 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[INFO ] 01:14:17.884 o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-[INFO ] 01:14:17.887 o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
-[WARN ] 01:14:17.902 o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
-[INFO ] 01:19:36.659 o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-[INFO ] 01:19:36.666 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-[INFO ] 01:19:36.684 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-[INFO ] 12:10:08.625 umcTask.umcAPI.UmcApiApplication - Starting UmcApiApplication using Java 11.0.11 on idongchan-ui-MacBookAir.local with PID 57409 (/Users/idongchan/Desktop/study/umcAPI/build/classes/java/main started by idongchan in /Users/idongchan/Desktop/study/umcAPI)
-[INFO ] 12:10:08.628 umcTask.umcAPI.UmcApiApplication - No active profile set, falling back to 1 default profile: "default"
-[INFO ] 12:10:09.912 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[INFO ] 12:10:09.912 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[INFO ] 12:10:10.582 o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[INFO ] 12:10:10.599 o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
-[INFO ] 12:10:11.216 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-[INFO ] 12:10:11.223 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-[INFO ] 12:10:11.224 o.a.catalina.core.StandardService - Starting service [Tomcat]
-[INFO ] 12:10:11.225 o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
-[INFO ] 12:10:11.441 org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-[INFO ] 12:10:11.454 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-[INFO ] 12:10:11.454 o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1541 ms
-[INFO ] 12:10:11.646 org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.12.Final
-[INFO ] 12:10:11.744 o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-[INFO ] 12:10:11.816 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-[INFO ] 12:10:12.082 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-[INFO ] 12:10:12.098 org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-[INFO ] 12:10:12.249 o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[INFO ] 12:10:12.256 o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[WARN ] 12:10:12.409 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[INFO ] 12:10:12.703 o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-[INFO ] 12:10:12.727 o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-[INFO ] 12:10:12.745 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-[INFO ] 12:10:12.787 umcTask.umcAPI.UmcApiApplication - Started UmcApiApplication in 4.678 seconds (JVM running for 5.622)
-[INFO ] 12:11:22.897 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[INFO ] 12:11:22.900 o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-[INFO ] 12:11:22.905 o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
-[ERROR] 12:11:23.228 umcTask.umcAPI.user.UserController - org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [INSERT INTO user (userId, userName, userPw) values (?, ?, ?);]; nested exception is java.sql.SQLSyntaxErrorException: Table 'umctestdb.user' doesn't exist
-[INFO ] 12:17:16.629 o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-[INFO ] 12:17:16.636 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-[INFO ] 12:17:16.657 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-[INFO ] 12:17:20.572 umcTask.umcAPI.UmcApiApplication - Starting UmcApiApplication using Java 11.0.11 on idongchan-ui-MacBookAir.local with PID 57439 (/Users/idongchan/Desktop/study/umcAPI/build/classes/java/main started by idongchan in /Users/idongchan/Desktop/study/umcAPI)
-[INFO ] 12:17:20.574 umcTask.umcAPI.UmcApiApplication - No active profile set, falling back to 1 default profile: "default"
-[INFO ] 12:17:22.126 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[INFO ] 12:17:22.126 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[INFO ] 12:17:22.748 o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[INFO ] 12:17:22.769 o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 JPA repository interfaces.
-[INFO ] 12:17:23.333 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-[INFO ] 12:17:23.341 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-[INFO ] 12:17:23.342 o.a.catalina.core.StandardService - Starting service [Tomcat]
-[INFO ] 12:17:23.342 o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
-[INFO ] 12:17:23.567 org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-[INFO ] 12:17:23.576 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-[INFO ] 12:17:23.577 o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1451 ms
-[INFO ] 12:17:23.769 org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.12.Final
-[INFO ] 12:17:23.873 o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-[INFO ] 12:17:23.951 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-[INFO ] 12:17:24.049 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-[INFO ] 12:17:24.061 org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-[INFO ] 12:17:24.218 o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[INFO ] 12:17:24.225 o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[WARN ] 12:17:24.384 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[INFO ] 12:17:24.685 o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-[INFO ] 12:17:24.708 o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-[INFO ] 12:17:24.724 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-[INFO ] 12:17:24.757 umcTask.umcAPI.UmcApiApplication - Started UmcApiApplication in 4.663 seconds (JVM running for 5.397)
-[INFO ] 12:17:35.245 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[INFO ] 12:17:35.248 o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-[INFO ] 12:17:35.250 o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-[INFO ] 12:19:01.701 o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-[INFO ] 12:19:01.708 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-[INFO ] 12:19:01.722 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-[INFO ] 12:19:05.117 umcTask.umcAPI.UmcApiApplication - Starting UmcApiApplication using Java 11.0.11 on idongchan-ui-MacBookAir.local with PID 57446 (/Users/idongchan/Desktop/study/umcAPI/build/classes/java/main started by idongchan in /Users/idongchan/Desktop/study/umcAPI)
-[INFO ] 12:19:05.124 umcTask.umcAPI.UmcApiApplication - No active profile set, falling back to 1 default profile: "default"
-[INFO ] 12:19:06.296 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[INFO ] 12:19:06.296 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[INFO ] 12:19:06.943 o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[INFO ] 12:19:06.959 o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
-[INFO ] 12:19:07.577 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-[INFO ] 12:19:07.585 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-[INFO ] 12:19:07.585 o.a.catalina.core.StandardService - Starting service [Tomcat]
-[INFO ] 12:19:07.585 o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
-[INFO ] 12:19:07.803 org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-[INFO ] 12:19:07.813 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-[INFO ] 12:19:07.813 o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1516 ms
-[INFO ] 12:19:08.011 org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.12.Final
-[INFO ] 12:19:08.089 o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-[INFO ] 12:19:08.175 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-[ERROR] 12:19:09.205 com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
-java.sql.SQLNonTransientConnectionException: Cannot load connection class because of underlying exception: com.mysql.cj.exceptions.WrongArgumentException: Malformed database URL, failed to parse the main URL sections.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:79)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:131)
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:221)
+[INFO ] 14:21:53.013 umcTask.umcAPI.UmcApiApplication - Starting UmcApiApplication using Java 11.0.11 on idongchan-ui-MacBookAir.local with PID 2544 (/Users/idongchan/Desktop/study/umcAPI/build/classes/java/main started by idongchan in /Users/idongchan/Desktop/study/umcAPI)
+[INFO ] 14:21:53.016 umcTask.umcAPI.UmcApiApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 14:21:54.466 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO ] 14:21:54.466 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO ] 14:21:55.154 o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 14:21:55.168 o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+[INFO ] 14:21:55.922 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+[INFO ] 14:21:55.931 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+[INFO ] 14:21:55.932 o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 14:21:55.932 o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+[INFO ] 14:21:56.248 org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[INFO ] 14:21:56.259 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 14:21:56.259 o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1792 ms
+[INFO ] 14:21:56.499 org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.12.Final
+[INFO ] 14:21:56.589 o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] 14:21:56.667 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 14:21:57.235 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 14:21:57.250 org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO ] 14:21:57.521 o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 14:21:57.527 o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 14:21:57.679 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 14:21:58.128 o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 14:21:58.206 o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+[INFO ] 14:21:58.255 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+[INFO ] 14:21:58.342 umcTask.umcAPI.UmcApiApplication - Started UmcApiApplication in 5.833 seconds (JVM running for 6.677)
+[INFO ] 14:23:58.502 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 14:23:58.505 o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 14:23:58.508 o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+[WARN ] 14:23:58.576 o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<java.lang.String> umcTask.umcAPI.user.UserController.loginUser(umcTask.umcAPI.user.model.PostLoginReq)]
+[WARN ] 14:25:30.020 o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<java.lang.String> umcTask.umcAPI.user.UserController.loginUser(umcTask.umcAPI.user.model.PostLoginReq)]
+[INFO ] 14:27:03.288 o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 14:27:03.294 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 14:27:03.307 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] 14:34:08.150 umcTask.umcAPI.UmcApiApplication - Starting UmcApiApplication using Java 11.0.11 on idongchan-ui-MacBookAir.local with PID 2631 (/Users/idongchan/Desktop/study/umcAPI/build/classes/java/main started by idongchan in /Users/idongchan/Desktop/study/umcAPI)
+[INFO ] 14:34:08.157 umcTask.umcAPI.UmcApiApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 14:34:09.430 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO ] 14:34:09.430 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO ] 14:34:10.075 o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 14:34:10.090 o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+[INFO ] 14:34:10.724 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+[INFO ] 14:34:10.732 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+[INFO ] 14:34:10.733 o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 14:34:10.733 o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+[INFO ] 14:34:10.957 org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[INFO ] 14:34:10.966 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 14:34:10.967 o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1536 ms
+[INFO ] 14:34:11.149 org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.12.Final
+[INFO ] 14:34:11.220 o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] 14:34:11.312 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 14:34:11.710 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 14:34:11.730 org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO ] 14:34:11.972 o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 14:34:11.979 o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 14:34:12.117 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 14:34:12.397 o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 14:34:12.421 o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+[INFO ] 14:34:12.441 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+[INFO ] 14:34:12.477 umcTask.umcAPI.UmcApiApplication - Started UmcApiApplication in 4.811 seconds (JVM running for 5.549)
+[INFO ] 14:34:21.296 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 14:34:21.298 o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 14:34:21.301 o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+[WARN ] 14:34:21.371 o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<java.lang.String> umcTask.umcAPI.user.UserController.loginUser(umcTask.umcAPI.user.model.PostLoginReq)]
+[INFO ] 14:35:44.734 o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 14:35:44.740 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 14:35:44.752 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] 23:31:42.093 umcTask.umcAPI.UmcApiApplication - Starting UmcApiApplication using Java 11.0.11 on idongchan-ui-MacBookAir.local with PID 3288 (/Users/idongchan/Desktop/study/umcAPI/build/classes/java/main started by idongchan in /Users/idongchan/Desktop/study/umcAPI)
+[INFO ] 23:31:42.095 umcTask.umcAPI.UmcApiApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 23:31:43.469 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO ] 23:31:43.469 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO ] 23:31:44.173 o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 23:31:44.189 o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+[INFO ] 23:31:44.874 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+[INFO ] 23:31:44.885 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+[INFO ] 23:31:44.886 o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 23:31:44.886 o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+[INFO ] 23:31:45.115 org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[INFO ] 23:31:45.125 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 23:31:45.125 o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1655 ms
+[INFO ] 23:31:45.321 org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.12.Final
+[INFO ] 23:31:45.412 o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] 23:31:45.482 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[ERROR] 23:31:46.548 com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
 	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
 	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
 	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
@@ -234,36 +140,42 @@ java.sql.SQLNonTransientConnectionException: Cannot load connection class becaus
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: com.mysql.cj.exceptions.UnableToConnectException: Cannot load connection class because of underlying exception: com.mysql.cj.exceptions.WrongArgumentException: Malformed database URL, failed to parse the main URL sections.
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	... 52 common frames omitted
-Caused by: com.mysql.cj.exceptions.WrongArgumentException: Malformed database URL, failed to parse the main URL sections.
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.conf.ConnectionUrlParser.parseConnectionString(ConnectionUrlParser.java:163)
-	at com.mysql.cj.conf.ConnectionUrlParser.<init>(ConnectionUrlParser.java:137)
-	at com.mysql.cj.conf.ConnectionUrlParser.parseConnectionString(ConnectionUrlParser.java:119)
-	at com.mysql.cj.conf.ConnectionUrl.getConnectionUrlInstance(ConnectionUrl.java:279)
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:195)
-	... 51 common frames omitted
-[WARN ] 12:19:09.211 o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
-java.sql.SQLNonTransientConnectionException: Cannot load connection class because of underlying exception: com.mysql.cj.exceptions.WrongArgumentException: Malformed database URL, failed to parse the main URL sections.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:79)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:131)
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:221)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818)
+	... 54 common frames omitted
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.base/java.net.Socket.connect(Socket.java:609)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 57 common frames omitted
+[WARN ] 23:31:46.556 o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
 	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
 	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
 	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
@@ -315,30 +227,36 @@ java.sql.SQLNonTransientConnectionException: Cannot load connection class becaus
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: com.mysql.cj.exceptions.UnableToConnectException: Cannot load connection class because of underlying exception: com.mysql.cj.exceptions.WrongArgumentException: Malformed database URL, failed to parse the main URL sections.
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	... 52 common frames omitted
-Caused by: com.mysql.cj.exceptions.WrongArgumentException: Malformed database URL, failed to parse the main URL sections.
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.conf.ConnectionUrlParser.parseConnectionString(ConnectionUrlParser.java:163)
-	at com.mysql.cj.conf.ConnectionUrlParser.<init>(ConnectionUrlParser.java:137)
-	at com.mysql.cj.conf.ConnectionUrlParser.parseConnectionString(ConnectionUrlParser.java:119)
-	at com.mysql.cj.conf.ConnectionUrl.getConnectionUrlInstance(ConnectionUrl.java:279)
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:195)
-	... 51 common frames omitted
-[ERROR] 12:19:09.218 o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
-[WARN ] 12:19:09.219 o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
-[INFO ] 12:19:09.228 o.a.catalina.core.StandardService - Stopping service [Tomcat]
-[ERROR] 12:19:09.307 o.s.boot.SpringApplication - Application run failed
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818)
+	... 54 common frames omitted
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.base/java.net.Socket.connect(Socket.java:609)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 57 common frames omitted
+[ERROR] 23:31:46.569 o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+[WARN ] 23:31:46.572 o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+[INFO ] 23:31:46.585 o.a.catalina.core.StandardService - Stopping service [Tomcat]
+[ERROR] 23:31:46.654 o.s.boot.SpringApplication - Application run failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
@@ -390,32 +308,32 @@ Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo can
 	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
 	... 38 common frames omitted
-[INFO ] 12:20:56.163 umcTask.umcAPI.UmcApiApplication - Starting UmcApiApplication using Java 11.0.11 on idongchan-ui-MacBookAir.local with PID 57466 (/Users/idongchan/Desktop/study/umcAPI/build/classes/java/main started by idongchan in /Users/idongchan/Desktop/study/umcAPI)
-[INFO ] 12:20:56.166 umcTask.umcAPI.UmcApiApplication - No active profile set, falling back to 1 default profile: "default"
-[INFO ] 12:20:57.637 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[INFO ] 12:20:57.637 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[INFO ] 12:20:58.319 o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[INFO ] 12:20:58.334 o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
-[INFO ] 12:20:58.919 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-[INFO ] 12:20:58.925 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-[INFO ] 12:20:58.926 o.a.catalina.core.StandardService - Starting service [Tomcat]
-[INFO ] 12:20:58.926 o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
-[INFO ] 12:20:59.189 org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-[INFO ] 12:20:59.207 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-[INFO ] 12:20:59.207 o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1570 ms
-[INFO ] 12:20:59.421 org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.12.Final
-[INFO ] 12:20:59.513 o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-[INFO ] 12:20:59.584 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-[ERROR] 12:21:00.617 com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
-java.sql.SQLNonTransientConnectionException: Cannot load connection class because of underlying exception: com.mysql.cj.exceptions.WrongArgumentException: Malformed database URL, failed to parse the main URL sections.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:79)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:131)
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:221)
+[INFO ] 23:32:48.370 umcTask.umcAPI.UmcApiApplication - Starting UmcApiApplication using Java 11.0.11 on idongchan-ui-MacBookAir.local with PID 3299 (/Users/idongchan/Desktop/study/umcAPI/build/classes/java/main started by idongchan in /Users/idongchan/Desktop/study/umcAPI)
+[INFO ] 23:32:48.374 umcTask.umcAPI.UmcApiApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 23:32:49.608 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO ] 23:32:49.609 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO ] 23:32:50.304 o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 23:32:50.319 o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+[INFO ] 23:32:50.976 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+[INFO ] 23:32:50.984 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+[INFO ] 23:32:50.985 o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 23:32:50.985 o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+[INFO ] 23:32:51.203 org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[INFO ] 23:32:51.213 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 23:32:51.213 o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1604 ms
+[INFO ] 23:32:51.403 org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.12.Final
+[INFO ] 23:32:51.487 o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] 23:32:51.552 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[ERROR] 23:32:52.611 com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
 	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
 	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
 	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
@@ -467,36 +385,42 @@ java.sql.SQLNonTransientConnectionException: Cannot load connection class becaus
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: com.mysql.cj.exceptions.UnableToConnectException: Cannot load connection class because of underlying exception: com.mysql.cj.exceptions.WrongArgumentException: Malformed database URL, failed to parse the main URL sections.
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	... 52 common frames omitted
-Caused by: com.mysql.cj.exceptions.WrongArgumentException: Malformed database URL, failed to parse the main URL sections.
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.conf.ConnectionUrlParser.parseConnectionString(ConnectionUrlParser.java:163)
-	at com.mysql.cj.conf.ConnectionUrlParser.<init>(ConnectionUrlParser.java:137)
-	at com.mysql.cj.conf.ConnectionUrlParser.parseConnectionString(ConnectionUrlParser.java:119)
-	at com.mysql.cj.conf.ConnectionUrl.getConnectionUrlInstance(ConnectionUrl.java:279)
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:195)
-	... 51 common frames omitted
-[WARN ] 12:21:00.625 o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
-java.sql.SQLNonTransientConnectionException: Cannot load connection class because of underlying exception: com.mysql.cj.exceptions.WrongArgumentException: Malformed database URL, failed to parse the main URL sections.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:79)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:131)
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:221)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818)
+	... 54 common frames omitted
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.base/java.net.Socket.connect(Socket.java:609)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 57 common frames omitted
+[WARN ] 23:32:52.616 o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
 	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
 	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
 	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
@@ -548,30 +472,36 @@ java.sql.SQLNonTransientConnectionException: Cannot load connection class becaus
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: com.mysql.cj.exceptions.UnableToConnectException: Cannot load connection class because of underlying exception: com.mysql.cj.exceptions.WrongArgumentException: Malformed database URL, failed to parse the main URL sections.
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	... 52 common frames omitted
-Caused by: com.mysql.cj.exceptions.WrongArgumentException: Malformed database URL, failed to parse the main URL sections.
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.conf.ConnectionUrlParser.parseConnectionString(ConnectionUrlParser.java:163)
-	at com.mysql.cj.conf.ConnectionUrlParser.<init>(ConnectionUrlParser.java:137)
-	at com.mysql.cj.conf.ConnectionUrlParser.parseConnectionString(ConnectionUrlParser.java:119)
-	at com.mysql.cj.conf.ConnectionUrl.getConnectionUrlInstance(ConnectionUrl.java:279)
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:195)
-	... 51 common frames omitted
-[ERROR] 12:21:00.631 o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
-[WARN ] 12:21:00.632 o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
-[INFO ] 12:21:00.641 o.a.catalina.core.StandardService - Stopping service [Tomcat]
-[ERROR] 12:21:00.710 o.s.boot.SpringApplication - Application run failed
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818)
+	... 54 common frames omitted
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.base/java.net.Socket.connect(Socket.java:609)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 57 common frames omitted
+[ERROR] 23:32:52.623 o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+[WARN ] 23:32:52.625 o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+[INFO ] 23:32:52.632 o.a.catalina.core.StandardService - Stopping service [Tomcat]
+[ERROR] 23:32:52.707 o.s.boot.SpringApplication - Application run failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
@@ -623,97 +553,128 @@ Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo can
 	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
 	... 38 common frames omitted
-[INFO ] 12:21:37.427 umcTask.umcAPI.UmcApiApplication - Starting UmcApiApplication using Java 11.0.11 on idongchan-ui-MacBookAir.local with PID 57475 (/Users/idongchan/Desktop/study/umcAPI/build/classes/java/main started by idongchan in /Users/idongchan/Desktop/study/umcAPI)
-[INFO ] 12:21:37.434 umcTask.umcAPI.UmcApiApplication - No active profile set, falling back to 1 default profile: "default"
-[INFO ] 12:21:38.680 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[INFO ] 12:21:38.680 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[INFO ] 12:21:39.358 o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[INFO ] 12:21:39.374 o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
-[INFO ] 12:21:40.004 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-[INFO ] 12:21:40.013 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-[INFO ] 12:21:40.013 o.a.catalina.core.StandardService - Starting service [Tomcat]
-[INFO ] 12:21:40.013 o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
-[INFO ] 12:21:40.229 org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-[INFO ] 12:21:40.239 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-[INFO ] 12:21:40.240 o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1560 ms
-[INFO ] 12:21:40.436 org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.12.Final
-[INFO ] 12:21:40.524 o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-[INFO ] 12:21:40.595 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-[INFO ] 12:21:40.813 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-[INFO ] 12:21:40.827 org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-[INFO ] 12:21:41.003 o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[INFO ] 12:21:41.010 o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[WARN ] 12:21:41.158 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[INFO ] 12:21:41.448 o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-[INFO ] 12:21:41.472 o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-[INFO ] 12:21:41.491 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-[INFO ] 12:21:41.523 umcTask.umcAPI.UmcApiApplication - Started UmcApiApplication in 4.623 seconds (JVM running for 5.367)
-[INFO ] 12:21:48.497 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[INFO ] 12:21:48.499 o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-[INFO ] 12:21:48.502 o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-[ERROR] 12:21:48.768 umcTask.umcAPI.user.UserController - org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [INSERT INTO user (userId, userName, userPw) values (?, ?, ?);]; nested exception is java.sql.SQLSyntaxErrorException: Table 'umctestdb.user' doesn't exist
-[INFO ] 12:35:53.352 o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-[INFO ] 12:35:53.364 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-[INFO ] 12:35:53.387 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-[INFO ] 12:35:57.818 umcTask.umcAPI.UmcApiApplication - Starting UmcApiApplication using Java 11.0.11 on idongchan-ui-MacBookAir.local with PID 57648 (/Users/idongchan/Desktop/study/umcAPI/build/classes/java/main started by idongchan in /Users/idongchan/Desktop/study/umcAPI)
-[INFO ] 12:35:57.821 umcTask.umcAPI.UmcApiApplication - No active profile set, falling back to 1 default profile: "default"
-[INFO ] 12:35:59.283 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[INFO ] 12:35:59.283 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[INFO ] 12:35:59.973 o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[INFO ] 12:35:59.988 o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
-[INFO ] 12:36:00.655 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-[INFO ] 12:36:00.663 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-[INFO ] 12:36:00.664 o.a.catalina.core.StandardService - Starting service [Tomcat]
-[INFO ] 12:36:00.664 o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
-[INFO ] 12:36:00.895 org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-[INFO ] 12:36:00.905 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-[INFO ] 12:36:00.905 o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1622 ms
-[INFO ] 12:36:01.084 org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.12.Final
-[INFO ] 12:36:01.211 o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-[INFO ] 12:36:01.282 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-[INFO ] 12:36:01.538 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-[INFO ] 12:36:01.552 org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-[INFO ] 12:36:01.700 o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[INFO ] 12:36:01.706 o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[WARN ] 12:36:01.855 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[INFO ] 12:36:02.140 o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-[INFO ] 12:36:02.164 o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-[INFO ] 12:36:02.183 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-[INFO ] 12:36:02.216 umcTask.umcAPI.UmcApiApplication - Started UmcApiApplication in 4.918 seconds (JVM running for 5.83)
-[INFO ] 12:36:05.980 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[INFO ] 12:36:05.981 o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-[INFO ] 12:36:05.985 o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
-[INFO ] 12:37:06.984 o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-[INFO ] 12:37:06.993 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-[INFO ] 12:37:07.008 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-[INFO ] 13:28:19.931 umcTask.umcAPI.UmcApiApplication - Starting UmcApiApplication using Java 11.0.11 on idongchan-ui-MacBookAir.local with PID 58103 (/Users/idongchan/Desktop/study/umcAPI/build/classes/java/main started by idongchan in /Users/idongchan/Desktop/study/umcAPI)
-[INFO ] 13:28:19.934 umcTask.umcAPI.UmcApiApplication - No active profile set, falling back to 1 default profile: "default"
-[INFO ] 13:28:21.126 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[INFO ] 13:28:21.126 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[INFO ] 13:28:21.812 o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[INFO ] 13:28:21.828 o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
-[INFO ] 13:28:22.528 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
-[INFO ] 13:28:22.535 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-[INFO ] 13:28:22.536 o.a.catalina.core.StandardService - Starting service [Tomcat]
-[INFO ] 13:28:22.536 o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
-[INFO ] 13:28:22.751 org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-[INFO ] 13:28:22.762 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-[INFO ] 13:28:22.762 o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1636 ms
-[INFO ] 13:28:23.027 org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.12.Final
-[INFO ] 13:28:23.102 o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-[INFO ] 13:28:23.174 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-[INFO ] 13:28:23.600 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-[INFO ] 13:28:23.635 org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-[INFO ] 13:28:24.064 o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[INFO ] 13:28:24.072 o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[WARN ] 13:28:24.257 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[INFO ] 13:28:24.571 o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-[INFO ] 13:28:24.593 o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-[INFO ] 13:28:24.609 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
-[INFO ] 13:28:24.648 umcTask.umcAPI.UmcApiApplication - Started UmcApiApplication in 5.296 seconds (JVM running for 6.08)
-[INFO ] 13:28:34.144 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[INFO ] 13:28:34.146 o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-[INFO ] 13:28:34.148 o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-[INFO ] 13:28:48.629 o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-[INFO ] 13:28:48.634 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-[INFO ] 13:28:48.645 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] 23:33:41.926 umcTask.umcAPI.UmcApiApplication - Starting UmcApiApplication using Java 11.0.11 on idongchan-ui-MacBookAir.local with PID 3304 (/Users/idongchan/Desktop/study/umcAPI/build/classes/java/main started by idongchan in /Users/idongchan/Desktop/study/umcAPI)
+[INFO ] 23:33:41.928 umcTask.umcAPI.UmcApiApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 23:33:43.290 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO ] 23:33:43.290 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO ] 23:33:43.921 o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 23:33:43.937 o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+[INFO ] 23:33:44.583 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+[INFO ] 23:33:44.594 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+[INFO ] 23:33:44.595 o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 23:33:44.595 o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+[INFO ] 23:33:44.821 org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[INFO ] 23:33:44.831 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 23:33:44.831 o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1540 ms
+[INFO ] 23:33:45.023 org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.12.Final
+[INFO ] 23:33:45.112 o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] 23:33:45.175 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 23:33:45.868 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 23:33:45.893 org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO ] 23:33:46.143 o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 23:33:46.150 o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 23:33:46.293 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 23:33:46.602 o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 23:33:46.626 o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+[INFO ] 23:33:46.646 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+[INFO ] 23:33:46.688 umcTask.umcAPI.UmcApiApplication - Started UmcApiApplication in 5.224 seconds (JVM running for 5.954)
+[INFO ] 23:33:54.357 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 23:33:54.358 o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 23:33:54.361 o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+[WARN ] 23:34:35.860 o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<java.lang.String> umcTask.umcAPI.user.UserController.loginUser(umcTask.umcAPI.user.model.PostLoginReq)]
+[INFO ] 23:42:47.584 o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 23:42:47.590 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 23:42:47.604 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] 23:42:53.055 umcTask.umcAPI.UmcApiApplication - Starting UmcApiApplication using Java 11.0.11 on idongchan-ui-MacBookAir.local with PID 3342 (/Users/idongchan/Desktop/study/umcAPI/build/classes/java/main started by idongchan in /Users/idongchan/Desktop/study/umcAPI)
+[INFO ] 23:42:53.057 umcTask.umcAPI.UmcApiApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 23:42:54.249 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO ] 23:42:54.249 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO ] 23:42:54.914 o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 23:42:54.928 o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+[INFO ] 23:42:55.517 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+[INFO ] 23:42:55.525 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+[INFO ] 23:42:55.526 o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 23:42:55.526 o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+[INFO ] 23:42:55.741 org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[INFO ] 23:42:55.750 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 23:42:55.751 o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1501 ms
+[INFO ] 23:42:55.938 org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.12.Final
+[INFO ] 23:42:56.021 o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] 23:42:56.086 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 23:42:56.350 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 23:42:56.367 org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO ] 23:42:56.572 o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 23:42:56.579 o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 23:42:56.725 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 23:42:57.030 o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 23:42:57.055 o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+[INFO ] 23:42:57.076 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+[INFO ] 23:42:57.110 umcTask.umcAPI.UmcApiApplication - Started UmcApiApplication in 4.509 seconds (JVM running for 5.254)
+[INFO ] 23:43:02.092 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 23:43:02.094 o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 23:43:02.097 o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+[INFO ] 23:46:05.876 o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 23:46:05.880 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 23:46:05.894 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] 23:46:10.168 umcTask.umcAPI.UmcApiApplication - Starting UmcApiApplication using Java 11.0.11 on idongchan-ui-MacBookAir.local with PID 3357 (/Users/idongchan/Desktop/study/umcAPI/build/classes/java/main started by idongchan in /Users/idongchan/Desktop/study/umcAPI)
+[INFO ] 23:46:10.170 umcTask.umcAPI.UmcApiApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 23:46:11.542 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO ] 23:46:11.542 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO ] 23:46:12.192 o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 23:46:12.206 o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+[INFO ] 23:46:12.822 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+[INFO ] 23:46:12.829 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+[INFO ] 23:46:12.830 o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 23:46:12.830 o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+[INFO ] 23:46:13.048 org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[INFO ] 23:46:13.057 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 23:46:13.057 o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1515 ms
+[INFO ] 23:46:13.276 org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.12.Final
+[INFO ] 23:46:13.350 o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] 23:46:13.416 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 23:46:13.691 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 23:46:13.712 org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO ] 23:46:13.868 o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 23:46:13.874 o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 23:46:14.015 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 23:46:14.307 o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 23:46:14.332 o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+[INFO ] 23:46:14.350 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+[INFO ] 23:46:14.386 umcTask.umcAPI.UmcApiApplication - Started UmcApiApplication in 4.688 seconds (JVM running for 5.504)
+[INFO ] 23:46:19.988 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 23:46:19.990 o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 23:46:19.992 o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+[INFO ] 23:50:26.910 o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 23:50:26.915 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 23:50:26.928 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] 23:50:30.971 umcTask.umcAPI.UmcApiApplication - Starting UmcApiApplication using Java 11.0.11 on idongchan-ui-MacBookAir.local with PID 3381 (/Users/idongchan/Desktop/study/umcAPI/build/classes/java/main started by idongchan in /Users/idongchan/Desktop/study/umcAPI)
+[INFO ] 23:50:30.973 umcTask.umcAPI.UmcApiApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 23:50:32.510 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO ] 23:50:32.510 o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO ] 23:50:33.158 o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 23:50:33.174 o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+[INFO ] 23:50:33.815 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+[INFO ] 23:50:33.824 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+[INFO ] 23:50:33.824 o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 23:50:33.824 o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+[INFO ] 23:50:34.039 org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[INFO ] 23:50:34.050 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 23:50:34.050 o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1539 ms
+[INFO ] 23:50:34.238 org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.12.Final
+[INFO ] 23:50:34.337 o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] 23:50:34.403 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 23:50:34.660 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 23:50:34.671 org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO ] 23:50:34.834 o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 23:50:34.840 o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 23:50:34.997 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 23:50:35.298 o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 23:50:35.322 o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+[INFO ] 23:50:35.341 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+[INFO ] 23:50:35.376 umcTask.umcAPI.UmcApiApplication - Started UmcApiApplication in 4.871 seconds (JVM running for 5.624)
+[INFO ] 23:50:43.657 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 23:50:43.659 o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 23:50:43.662 o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+[INFO ] 23:53:03.217 o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 23:53:03.222 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 23:53:03.235 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

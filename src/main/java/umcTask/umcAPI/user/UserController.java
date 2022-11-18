@@ -76,9 +76,19 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<String> loginUser(@RequestBody PostLoginReq postLoginReq) {
-        Integer loginCnt = userService.userLogin(postLoginReq);
+    public ResponseEntity<String> loginUser(@RequestParam(value = "userId") String userId, @RequestParam(value = "userPw") String userPw  ) {
+        System.out.println("Mapping good");
+        try {
+            PostLoginReq postLoginReq = new PostLoginReq(userId, userPw);
+            Integer loginCnt = userService.userLogin(postLoginReq);
+            if (loginCnt == 200) {
+                return new ResponseEntity<>(String.format("Login Success!"), HttpStatus.OK);
+            } else return new ResponseEntity<>(String.format("Login Failed"), HttpStatus.BAD_REQUEST);
+        } catch (Exception e) {
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
 
-        return new ResponseEntity<>(String.format("%d joined", loginCnt), HttpStatus.OK);
+
+
     }
 }
