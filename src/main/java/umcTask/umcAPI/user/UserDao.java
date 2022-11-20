@@ -2,19 +2,17 @@ package umcTask.umcAPI.user;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.namedparam.EmptySqlParameterSource;
-import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
-import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
-import org.springframework.jdbc.core.namedparam.SqlParameterSource;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.namedparam.*;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
-import umcTask.umcAPI.user.model.GetUserRes;
-import umcTask.umcAPI.user.model.PatchUserReq;
-import umcTask.umcAPI.user.model.PostUserReq;
+import umcTask.umcAPI.user.model.*;
 
 import javax.sql.DataSource;
+import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 @Slf4j
 @Repository
@@ -23,9 +21,12 @@ public class UserDao {
     private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
     private final UserRowMapper userRowMapper;
 
-    public UserDao(NamedParameterJdbcTemplate namedParameterJdbcTemplate, UserRowMapper userRowMapper) {
+    private final JdbcTemplate jdbcTemplate;
+
+    public UserDao(NamedParameterJdbcTemplate namedParameterJdbcTemplate, UserRowMapper userRowMapper, JdbcTemplate jdbcTemplate) {
         this.namedParameterJdbcTemplate = namedParameterJdbcTemplate;
         this.userRowMapper = userRowMapper;
+        this.jdbcTemplate = jdbcTemplate;
     }
     @Autowired
     public void setDataSource(DataSource dataSource){
@@ -48,15 +49,16 @@ public class UserDao {
         return namedParameterJdbcTemplate.query(qry, parameterSource, this.userRowMapper);
     }
 
-    public PostUserReq createUser(PostUserReq postUserReq) {
+    public int createUser(PostUserReq postUserReq) {
         KeyHolder keyHolder = new GeneratedKeyHolder();
         SqlParameterSource parameterSource = new MapSqlParameterSource("userId", postUserReq.getUserId())
                                                             .addValue("userName", postUserReq.getUserName())
                                                             .addValue("userPw", postUserReq.getUserPw());
         int affectedRows = namedParameterJdbcTemplate.update(UserSql.INSERT, parameterSource, keyHolder);
         log.debug("{} inserted, new id = {}", affectedRows, keyHolder.getKey());
+        String lastInsertIdQuery = "select last_insert_id()";
 
-        return postUserReq;
+        return this.jdbcTemplate.queryForObject(lastInsertIdQuery, int.class);
     }
 
     public Integer deleteByIdx(Integer userIdx) {
@@ -73,5 +75,15 @@ public class UserDao {
                                                             .addValue("userName", patchUserReq.getUserName())
                                                             .addValue("userPw", patchUserReq.getUserPw());
         return namedParameterJdbcTemplate.update(qry , parameterSource);
+    }
+
+    public GetUserRes getUserIdPw(PostLoginReq postLoginReq) {
+        String qry = UserSql.SELECT + UserSql.USER_ID;
+        String userId = postLoginReq.getUserId();
+        User user = new User();
+        Map<String, String> params = Collections.singletonMap("userId", userId);
+        SqlParameterSource namedParameters = new MapSqlParameterSource("userId", userId);
+
+        return namedParameterJdbcTemplate.queryForObject(qry, params, this.userRowMapper);
     }
 }

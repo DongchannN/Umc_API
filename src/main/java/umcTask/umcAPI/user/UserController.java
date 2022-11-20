@@ -1,7 +1,6 @@
 package umcTask.umcAPI.user;
 
 import lombok.extern.slf4j.Slf4j;
-import org.apache.logging.log4j.message.StringFormattedMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,10 +18,16 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/test")
-    public String projectInfo() {
-        return "Controller is working!";
+    public ResponseEntity<String> projectInfo() {
+        return ResponseEntity.ok("Controller is working!");
     }
 
+
+    /**
+     * /users/list
+     * 회원들의 모든 정보를 Get.
+     * @return : List<GetUserRes> userList
+     */
     @GetMapping("/list")
     public Object userList() {
         log.debug("/userList start");
@@ -31,14 +36,24 @@ public class UserController {
         return userList;
     }
 
+    /**
+     * 회원들의 status를 이용해 정보를 가져옴.
+     * @param status
+     * @return : List<GetUserRes> userList
+     */
     @GetMapping("/statusList/{status}")
     public Object userByStatusCode(@PathVariable("status") String status) {
         List<GetUserRes> userList = userService.findUserByStatus(status);
         return userList;
     }
 
+    /**
+     * 회원 가입
+     * @param postUserReq
+     * @return : ResponseEntity<PostUserRes>
+     */
     @PostMapping(value = "/join")
-    public ResponseEntity<PostUserReq> joinUser(@RequestBody PostUserReq postUserReq) {
+    public ResponseEntity<PostUserRes> joinUser(@RequestBody PostUserReq postUserReq) {
         try {
             log.debug("user = {}", postUserReq.toString());
             return new ResponseEntity<>(userService.createUser(postUserReq), HttpStatus.OK);
@@ -48,6 +63,11 @@ public class UserController {
         }
     }
 
+    /**
+     * 회원삭제
+     * @param userIdx
+     * @return
+     */
     @ResponseBody
     @PostMapping("/deleteUser")
     public ResponseEntity<String> userDelete(@RequestParam(value = "userIdx") Integer userIdx) {
@@ -61,6 +81,12 @@ public class UserController {
         }
     }
 
+    /**
+     * 회원정보 변경
+     * @param userIdx
+     * @param user
+     * @return
+     */
     @PatchMapping("/changeInfo/{userIdx}")
     public ResponseEntity<String> changeUser(@PathVariable("userIdx") int userIdx, @RequestBody User user) {
         try {
@@ -75,17 +101,22 @@ public class UserController {
         }
     }
 
+    /**
+     * 로그인
+     * @param userId
+     * @param userPw
+     * @return
+     */
     @PostMapping("/login")
-    public ResponseEntity<String> loginUser(@RequestParam(value = "userId") String userId, @RequestParam(value = "userPw") String userPw  ) {
-        System.out.println("Mapping good");
+    public ResponseEntity<PostLoginRes> loginUser(@RequestParam(value = "userId") String userId, @RequestParam(value = "userPw") String userPw  ) {
+
         try {
             PostLoginReq postLoginReq = new PostLoginReq(userId, userPw);
-            Integer loginCnt = userService.userLogin(postLoginReq);
-            if (loginCnt == 200) {
-                return new ResponseEntity<>(String.format("Login Success!"), HttpStatus.OK);
-            } else return new ResponseEntity<>(String.format("Login Failed"), HttpStatus.BAD_REQUEST);
+            PostLoginRes postLoginRes = userService.userLogin(postLoginReq);
+
+            return new ResponseEntity<>(postLoginRes, HttpStatus.OK);
         } catch (Exception e) {
-            return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
 
 
