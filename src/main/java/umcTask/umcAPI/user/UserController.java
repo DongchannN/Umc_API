@@ -5,8 +5,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import umcTask.umcAPI.JwtService;
 import umcTask.umcAPI.user.model.*;
 
+import java.net.http.HttpResponse;
 import java.util.List;
 
 @Slf4j
@@ -17,8 +19,15 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    private final JwtService jwtService;
+
+    public UserController(JwtService jwtService) {
+        this.jwtService = jwtService;
+    }
+
     @GetMapping("/test")
     public ResponseEntity<String> projectInfo() {
+
         return ResponseEntity.ok("Controller is working!");
     }
 
@@ -26,6 +35,7 @@ public class UserController {
     /**
      * /users/list
      * 회원들의 모든 정보를 Get.
+     *
      * @return : List<GetUserRes> userList
      */
     @GetMapping("/list")
@@ -38,6 +48,7 @@ public class UserController {
 
     /**
      * 회원들의 status를 이용해 정보를 가져옴.
+     *
      * @param status
      * @return : List<GetUserRes> userList
      */
@@ -49,6 +60,7 @@ public class UserController {
 
     /**
      * 회원 가입
+     *
      * @param postUserReq
      * @return : ResponseEntity<PostUserRes>
      */
@@ -65,6 +77,7 @@ public class UserController {
 
     /**
      * 회원삭제
+     *
      * @param userIdx
      * @return
      */
@@ -83,6 +96,7 @@ public class UserController {
 
     /**
      * 회원정보 변경
+     *
      * @param userIdx
      * @param user
      * @return
@@ -103,12 +117,13 @@ public class UserController {
 
     /**
      * 로그인
+     *
      * @param userId
      * @param userPw
      * @return
      */
     @PostMapping("/login")
-    public ResponseEntity<PostLoginRes> loginUser(@RequestParam(value = "userId") String userId, @RequestParam(value = "userPw") String userPw  ) {
+    public ResponseEntity<PostLoginRes> loginUser(@RequestParam(value = "userId") String userId, @RequestParam(value = "userPw") String userPw) {
 
         try {
             PostLoginReq postLoginReq = new PostLoginReq(userId, userPw);
@@ -119,6 +134,23 @@ public class UserController {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
 
+    }
+
+    @GetMapping("/{userIdx}/board")
+    public ResponseEntity<GetBoardRes> boardPage(@PathVariable("userIdx") int userIdx, @RequestParam(value = "page") int page, GetUserReq getUserReq) throws Exception {
+
+        String jwt = getUserReq.getJwt();
+
+        try {
+            int userIdxByJwt = jwtService.getUserIdx();
+            if (userIdx != userIdxByJwt) {
+                return new ResponseEntity<>(null, HttpStatus.UNAUTHORIZED);
+            }
+
+            return new ResponseEntity<>(null, HttpStatus.OK);
+        } catch (Exception e) {
+            throw e;
+        }
 
 
     }

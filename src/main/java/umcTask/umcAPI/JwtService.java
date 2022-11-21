@@ -7,7 +7,7 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
-import umcTask.secure.JwtSecurityKey;
+import umcTask.invisible.JwtSecurityKey;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
@@ -43,4 +43,5 @@ public class JwtService {
 
         return claimsJws.getBody().get("userIdx", Integer.class);
     }
+
 }
