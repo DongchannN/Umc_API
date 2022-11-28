@@ -6,10 +6,14 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import umcTask.umcAPI.JwtService;
+import umcTask.umcAPI.baseResponse.BaseException;
+import umcTask.umcAPI.baseResponse.BaseResponse;
+import umcTask.umcAPI.baseResponse.BaseResponseStatus;
 import umcTask.umcAPI.user.model.*;
 
 import java.net.http.HttpResponse;
 import java.util.List;
+import java.util.Objects;
 
 @Slf4j
 @RestController
@@ -39,11 +43,11 @@ public class UserController {
      * @return : List<GetUserRes> userList
      */
     @GetMapping("/list")
-    public Object userList() {
+    public BaseResponse<List<GetUserRes>> userList() {
         log.debug("/userList start");
         List<GetUserRes> userList = userService.getUserList();
 
-        return userList;
+        return new BaseResponse<>(userList);
     }
 
     /**
@@ -53,9 +57,10 @@ public class UserController {
      * @return : List<GetUserRes> userList
      */
     @GetMapping("/statusList/{status}")
-    public Object userByStatusCode(@PathVariable("status") String status) {
+    public BaseResponse<List<GetUserRes>> userByStatusCode(@PathVariable("status") String status) {
+
         List<GetUserRes> userList = userService.findUserByStatus(status);
-        return userList;
+        return new BaseResponse<>(userList);
     }
 
     /**
@@ -65,13 +70,12 @@ public class UserController {
      * @return : ResponseEntity<PostUserRes>
      */
     @PostMapping(value = "/join")
-    public ResponseEntity<PostUserRes> joinUser(@RequestBody PostUserReq postUserReq) {
+    public BaseResponse<PostUserRes> joinUser(@RequestBody PostUserReq postUserReq) {
         try {
-            log.debug("user = {}", postUserReq.toString());
-            return new ResponseEntity<>(userService.createUser(postUserReq), HttpStatus.OK);
-        } catch (Exception e) {
-            log.error(e.toString());
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+            PostUserRes postUserRes = userService.createUser(postUserReq);
+            return new BaseResponse<>(postUserRes);
+        } catch (BaseException exception) {
+            return new BaseResponse<>(exception.getStatus());
         }
     }
 
@@ -83,14 +87,14 @@ public class UserController {
      */
     @ResponseBody
     @PostMapping("/deleteUser")
-    public ResponseEntity<String> userDelete(@RequestParam(value = "userIdx") Integer userIdx) {
+    public BaseResponse<String> userDelete(@RequestParam(value = "userIdx") Integer userIdx) {
         try {
             log.debug("user idx = {}", userIdx);
             Integer deletedCnt = userService.deleteByIdx(userIdx);
-            return new ResponseEntity<>(String.format("%d deleted", deletedCnt), HttpStatus.OK);
-        } catch (Exception e) {
-            log.error(e.toString());
-            return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+            String result = deletedCnt + " deleted";
+            return new BaseResponse<>(result);
+        } catch (Exception exception) {
+            return new BaseResponse<>(exception.getMessage());
         }
     }
 
@@ -102,17 +106,11 @@ public class UserController {
      * @return
      */
     @PatchMapping("/changeInfo/{userIdx}")
-    public ResponseEntity<String> changeUser(@PathVariable("userIdx") int userIdx, @RequestBody User user) {
-        try {
-            PatchUserReq patchUserReq = new PatchUserReq(userIdx, user.getUserName(), user.getUserPw());
-            log.debug("user = {}", user.toString());
-            Integer updatedCnt = userService.updateByIdx(patchUserReq);
-
-            return new ResponseEntity<>(String.format("%d updated", updatedCnt), HttpStatus.OK);
-        } catch (Exception e) {
-            log.error(e.toString());
-            return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
-        }
+    public BaseResponse<String> changeUser(@PathVariable("userIdx") int userIdx, @RequestBody User user) {
+        PatchUserReq patchUserReq = new PatchUserReq(userIdx, user.getUserName(), user.getUserPw());
+        Integer updatedCnt = userService.updateByIdx(patchUserReq);
+        String result = updatedCnt + " updated";
+        return new BaseResponse<>(result);
     }
 
     /**
@@ -123,31 +121,32 @@ public class UserController {
      * @return
      */
     @PostMapping("/login")
-    public ResponseEntity<PostLoginRes> loginUser(@RequestParam(value = "userId") String userId, @RequestParam(value = "userPw") String userPw) {
+    public BaseResponse<PostLoginRes> loginUser(@RequestParam(value = "userId") String userId, @RequestParam(value = "userPw") String userPw) {
 
         try {
             PostLoginReq postLoginReq = new PostLoginReq(userId, userPw);
             PostLoginRes postLoginRes = userService.userLogin(postLoginReq);
 
-            return new ResponseEntity<>(postLoginRes, HttpStatus.OK);
-        } catch (Exception e) {
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+            return new BaseResponse<>(postLoginRes);
+        } catch (BaseException exception) {
+            return new BaseResponse<>(exception.getStatus());
         }
 
     }
 
     @GetMapping("/{userIdx}/board")
-    public ResponseEntity<GetBoardRes> boardPage(@PathVariable("userIdx") int userIdx, @RequestParam(value = "page") int page, GetUserReq getUserReq) throws Exception {
+    public BaseResponse<GetBoardRes> boardPage(@PathVariable("userIdx") int userIdx, @RequestParam(value = "page") int page, GetUserReq getUserReq) throws Exception {
 
         String jwt = getUserReq.getJwt();
 
         try {
             int userIdxByJwt = jwtService.getUserIdx();
             if (userIdx != userIdxByJwt) {
-                return new ResponseEntity<>(null, HttpStatus.UNAUTHORIZED);
+                return new BaseResponse<>(BaseResponseStatus.UNAUTHORIZED);
             }
 
-            return new ResponseEntity<>(null, HttpStatus.OK);
+            GetBoardRes getBoardRes = userService.boardPage();
+            return new BaseResponse<>(getBoardRes);
         } catch (Exception e) {
             throw e;
         }

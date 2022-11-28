@@ -1,10 +1,10 @@
 package umcTask.umcAPI.user;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import umcTask.umcAPI.SHA256;
+import umcTask.umcAPI.baseResponse.BaseException;
+import umcTask.umcAPI.baseResponse.BaseResponseStatus;
 import umcTask.umcAPI.user.model.*;
 import umcTask.umcAPI.JwtService;
 
@@ -24,46 +24,76 @@ public class UserService {
         this.jwtService = jwtService;
     }
 
+    /**
+     * 모든 유저 정보 반환
+     * @return
+     */
     public List<GetUserRes> getUserList() {
         return this.userDao.findList();
     }
 
+    /**
+     * 상태코드로 유저 정보 반환.
+     * @param status
+     * @return
+     */
     public List<GetUserRes> findUserByStatus(String status) {
         return this.userDao.findByStatusCode(status);
     }
 
-    public PostUserRes createUser(PostUserReq postUserReq) throws NoSuchAlgorithmException {
-        SHA256 sha256 = new SHA256();
+    /**
+     * 유저 생성
+     * @param postUserReq
+     * @return
+     * @throws NoSuchAlgorithmException
+     */
+    public PostUserRes createUser(PostUserReq postUserReq) throws BaseException {
         String encryptedPw;
         try {
-            encryptedPw = sha256.encrypt(postUserReq.getUserPw());
+            encryptedPw = new SHA256().encrypt(postUserReq.getUserPw());
             postUserReq.setUserPw(encryptedPw);
-        } catch (Exception e) {
-            log.error(e.toString());
+        } catch (Exception ignored) {
+            throw new BaseException(BaseResponseStatus.ENCRYPT_PASSWORD_ERROR);
         }
 
         try {
             int userIdx = userDao.createUser(postUserReq);
             String jwt = jwtService.createJwt(userIdx);
             return new PostUserRes(userIdx, jwt);
-        } catch (Exception e) {
-            throw e;
+        } catch (Exception exception) {
+            throw new BaseException(BaseResponseStatus.DATABASE_ERROR);
         }
     }
 
-    public Integer deleteByIdx(Integer userIdx) {
+    /**
+     * 유저 삭제
+     * @param userIdx
+     * @return
+     */
+    public Integer deleteByIdx(Integer userIdx) throws BaseException{
         log.debug("user idx = {}", userIdx);
 
         return userDao.deleteByIdx(userIdx);
     }
 
+    /**
+     * 유저 정보 갱신
+     * @param patchUserReq
+     * @return
+     */
     public Integer updateByIdx(PatchUserReq patchUserReq) {
         log.debug("user Idx = {}", patchUserReq.getUserIdx());
 
         return userDao.updateByIdx(patchUserReq);
     }
 
-    public PostLoginRes userLogin(PostLoginReq postLoginReq) throws Exception {
+    /**
+     * 유저 로그인
+     * @param postLoginReq
+     * @return
+     * @throws Exception
+     */
+    public PostLoginRes userLogin(PostLoginReq postLoginReq) throws BaseException {
         GetUserRes user = userDao.getUserIdPw(postLoginReq);
 
         SHA256 sha256 = new SHA256();
@@ -80,9 +110,12 @@ public class UserService {
             String jwt = jwtService.createJwt(userIdx);
             return new PostLoginRes(userIdx, jwt);
         } else {
-            Exception exception = new Exception("Failed to Login");
-            throw exception;
+            throw new BaseException(BaseResponseStatus.WRONG_PASSWORD);
         }
+    }
+
+    public GetBoardRes boardPage() {
+        return new GetBoardRes(1);
     }
 
 

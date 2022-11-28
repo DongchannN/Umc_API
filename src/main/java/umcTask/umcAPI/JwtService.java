@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 import umcTask.invisible.JwtSecurityKey;
+import umcTask.umcAPI.baseResponse.BaseException;
+import umcTask.umcAPI.baseResponse.BaseResponseStatus;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
@@ -28,17 +30,17 @@ public class JwtService {
         return request.getHeader("X-ACCESS-TOKEN");
     }
 
-    public int getUserIdx() throws Exception {
+    public int getUserIdx() throws BaseException {
         String accessToken = getJwt();
         if (accessToken == null || accessToken.length() == 0) {
-            throw new Exception("no token");
+            throw new BaseException(BaseResponseStatus.EMPTY_JWT);
         }
 
         Jws<Claims> claimsJws;
         try {
             claimsJws = Jwts.parser().setSigningKey(JwtSecurityKey.JWT_SECURITY_KEY).parseClaimsJws(accessToken);
         } catch (Exception ignored) {
-            throw new Exception("invalid token");
+            throw new BaseException(BaseResponseStatus.INVALID_JWT);
         }
 
         return claimsJws.getBody().get("userIdx", Integer.class);
