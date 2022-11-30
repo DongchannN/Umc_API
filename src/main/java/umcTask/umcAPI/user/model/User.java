@@ -2,12 +2,15 @@ package umcTask.umcAPI.user.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.Column;
 import java.sql.Timestamp;
 import java.util.Date;
 
-@Data
+@Getter
+@Setter
 public class User {
     private Integer userIdx;
     private String userName;

@@ -1,10 +1,13 @@
 package umcTask.umcAPI.user.model;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.sql.Timestamp;
 
-@Data
+@Getter
+@Setter
 public class GetUserRes {
 
     private int userIdx;
